@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds5p1kihpefyy"]
+
+[ext_resource type="PackedScene" uid="uid://n54aeb44rx5" path="res://background.tscn" id="1_8gsyd"]
+[ext_resource type="PackedScene" uid="uid://lnad6av1520a" path="res://player.tscn" id="2_ijpqn"]
+[ext_resource type="PackedScene" uid="uid://nfs58dlteknc" path="res://forground.tscn" id="3_6ch55"]
+[ext_resource type="PackedScene" uid="uid://co838sbjfolqv" path="res://test_3d.tscn" id="4_ou554"]
+
+[node name="level" type="Node3D"]
+
+[node name="background" parent="." instance=ExtResource("1_8gsyd")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 65.1797)
+
+[node name="player" parent="." instance=ExtResource("2_ijpqn")]
+
+[node name="forground" parent="." instance=ExtResource("3_6ch55")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 1, 0, -5.872, -4.38327)
+
+[node name="platforms" type="Node3D" parent="."]
+
+[node name="test 3d" parent="platforms" instance=ExtResource("4_ou554")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.964017, -1.50959, 0)
+
+[node name="test 3d2" parent="platforms" instance=ExtResource("4_ou554")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.55739, 3.51494, -0.322397)
+
+[node name="test 3d3" parent="platforms" instance=ExtResource("4_ou554")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.336, 2.097, 0)
+
+[node name="test 3d4" parent="platforms" instance=ExtResource("4_ou554")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.078, 5, 0)
+
+[node name="test 3d5" parent="platforms" instance=ExtResource("4_ou554")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.036, 5, 0)
+
+[node name="test 3d6" parent="platforms" instance=ExtResource("4_ou554")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 1, -11.1469, -5.53819, 0)

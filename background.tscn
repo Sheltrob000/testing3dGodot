@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://n54aeb44rx5"]
+
+[ext_resource type="Texture2D" uid="uid://cb02phyebuv6n" path="res://assets/360_F_518419158_yXXBww2r5Z3XoutBxRX8KHNZOpPjhC03.jpg" id="1_wkeny"]
+
+[node name="background" type="Node3D"]
+
+[node name="Node3D2" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.82963)
+texture = ExtResource("1_wkeny")

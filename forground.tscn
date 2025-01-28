@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://nfs58dlteknc"]
+
+[ext_resource type="Texture2D" uid="uid://34v04hohhwvt" path="res://assets/download.jpg" id="1_56xas"]
+
+[node name="forground" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.222584)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.90943)
+texture = ExtResource("1_56xas")

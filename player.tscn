@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://lnad6av1520a"]
+
+[ext_resource type="Texture2D" uid="uid://bk68l3glv840v" path="res://assets/icon.svg" id="1_5eyqg"]
+[ext_resource type="Script" path="res://player.gd" id="1_tsjol"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k8b6x"]
+
+[sub_resource type="Environment" id="Environment_62g62"]
+ssao_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.310086, 0.548317, 0.898856, 1)
+fog_density = 1.0
+fog_depth_curve = 0.466516
+fog_depth_end = 118.1
+
+[node name="player" type="Node3D"]
+script = ExtResource("1_tsjol")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D"]
+texture = ExtResource("1_5eyqg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("BoxShape3D_k8b6x")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.23283)
+environment = SubResource("Environment_62g62")
