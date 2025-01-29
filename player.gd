@@ -3,8 +3,12 @@ extends Node3D
 
 var verticalspeed = 0
 var jumpCount = 1
+var isDashing = false
+var canDash = true
 const movementSpeed = 2000
 const Gravity = 50
+const Dashspeed = 10000
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,7 +37,24 @@ func _process(delta: float) -> void:
 	
 	if $CharacterBody3D.is_on_ceiling():
 		verticalspeed = 0
+		
+	if Input.is_action_just_pressed("dash") and canDash:
+		isDashing = true
+		canDash = false
+		verticalspeed = 0
+		$CharacterBody3D/dashTimer.start()
+		$CharacterBody3D/canDashTimer.start()
 	
 	verticalspeed -= Gravity * delta
 	$CharacterBody3D.velocity.y = verticalspeed
-	$CharacterBody3D.velocity.x = speed * movementSpeed * delta	
+	
+	if(isDashing):
+		$CharacterBody3D.velocity.x = speed * Dashspeed * delta	
+	else: $CharacterBody3D.velocity.x = speed * movementSpeed * delta	
+
+
+func _on_dash_timer_timeout() -> void:
+	isDashing = false
+
+func _on_can_dash_timer_timeout() -> void:
+	canDash = true

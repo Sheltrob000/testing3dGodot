@@ -28,3 +28,14 @@ shape = SubResource("BoxShape3D_k8b6x")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.23283)
 environment = SubResource("Environment_62g62")
+
+[node name="dashTimer" type="Timer" parent="CharacterBody3D"]
+wait_time = 0.15
+one_shot = true
+
+[node name="canDashTimer" type="Timer" parent="CharacterBody3D"]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="CharacterBody3D/dashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="CharacterBody3D/canDashTimer" to="." method="_on_can_dash_timer_timeout"]

@@ -11,6 +11,7 @@
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 65.1797)
 
 [node name="player" parent="." instance=ExtResource("2_ijpqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.216569)
 
 [node name="forground" parent="." instance=ExtResource("3_6ch55")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 1, 0, -5.872, -4.38327)
@@ -37,3 +38,6 @@ transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 1, -11.1469, -5.53819, 0)
 
 [node name="test 3d7" parent="platforms" instance=ExtResource("4_ou554")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.7572, 0, 0)
+
+[node name="test 3d8" parent="platforms" instance=ExtResource("4_ou554")]
+transform = Transform3D(0.1, 0, 0, 0, 30, 0, 0, 0, 1, 33.3558, 8.88902, 0)
