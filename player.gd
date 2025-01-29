@@ -36,7 +36,4 @@ func _process(delta: float) -> void:
 	
 	verticalspeed -= Gravity * delta
 	$CharacterBody3D.velocity.y = verticalspeed
-	$CharacterBody3D.velocity.x = speed * movementSpeed * delta
-
-	#position += Vector3(speed, 0, 0) * 50 * delta
-	
+	$CharacterBody3D.velocity.x = speed * movementSpeed * delta	
