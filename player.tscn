@@ -3,7 +3,8 @@
 [ext_resource type="Script" path="res://player.gd" id="1_tsjol"]
 [ext_resource type="Texture2D" uid="uid://3w7rm2152dux" path="res://assets/incsanityMC.png" id="2_owgem"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_k8b6x"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8psk4"]
+size = Vector3(0.5, 1, 1)
 
 [sub_resource type="Environment" id="Environment_62g62"]
 ssao_enabled = true
@@ -24,8 +25,8 @@ pixel_size = 0.0004
 texture = ExtResource("2_owgem")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(0.5, 0, 0, 0, 1.1, 0, 0, 0, 1, 0, 0.146232, 0)
-shape = SubResource("BoxShape3D_k8b6x")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0612273, 0.0944545, 0)
+shape = SubResource("BoxShape3D_8psk4")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.58031)

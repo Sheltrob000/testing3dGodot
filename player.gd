@@ -21,7 +21,6 @@ func _process(delta: float) -> void:
 	$CharacterBody3D.move_and_slide()
 	speed = Input.get_axis("left", "right")
 	spriteDirection()
-	print(speed)
 	
 	if(Input.is_action_just_pressed("jump") and jumpCount > 0):
 		if($CharacterBody3D.is_on_floor()):
