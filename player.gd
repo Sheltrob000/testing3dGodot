@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 func spriteDirection():
 	if speed == -1:
 		$CharacterBody3D/Sprite3D.flip_h = true
-	else: $CharacterBody3D/Sprite3D.flip_h = false
+	elif speed == 1: $CharacterBody3D/Sprite3D.flip_h = false
 
 func _on_dash_timer_timeout() -> void:
 	isDashing = false

@@ -29,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0612273, 0.0944545, 0)
 shape = SubResource("BoxShape3D_8psk4")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.58031)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.509285, 4.3286)
 environment = SubResource("Environment_62g62")
 
 [node name="dashTimer" type="Timer" parent="CharacterBody3D"]
